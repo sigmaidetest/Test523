@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "Test523/lambda.js",
-        "code": "exports.handler = function(event, context, callback) {\n    \n    console.log(event);\n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "code": "exports.handler = function (event, context, callback) {\n\n    console.log(event);\n\n    callback(null, {\n        \"isBase64Encoded\": true,\n        \"statusCode\": 200,\n        \"headers\": {\n            \"Access-Control-Allow-Origin\": \"*\"\n        },\n        \"body\": JSON.stringify(event)\n    });\n}",
         "triggers": [
           {
             "resourceName": "apigusEast1API523testpost",
@@ -34,6 +34,14 @@
           "timeout": 60,
           "memory": 128,
           "layers": []
+        },
+        "testCases": {
+          "e02c51b8-f0a9-4215-ac49-4ce1b08c83aa": {
+            "id": "e02c51b8-f0a9-4215-ac49-4ce1b08c83aa",
+            "name": "Unnamed event",
+            "functionId": "3c2c1259-f6f3-4e9d-ab15-79e0712b6f53",
+            "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}"
+          }
         }
       }
     },
@@ -56,7 +64,7 @@
           "resourceName": "test",
           "resourcePath": "/test",
           "restMethod": "POST",
-          "proxyIntegration": false,
+          "proxyIntegration": true,
           "enableCORS": true,
           "stageMode": 0,
           "stageName": "test"
@@ -86,7 +94,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1546861369302
+    "lastSave": 1546862039567
   },
   "VCS_STATE": {
     "provider": "GitHub",
