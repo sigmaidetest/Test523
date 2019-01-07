@@ -1,0 +1,98 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "0c6ca6db-4cfa-4989-a717-d1690b315fb1": {
+        "id": "0c6ca6db-4cfa-4989-a717-d1690b315fb1",
+        "parent": null,
+        "name": "Test523",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "3c2c1259-f6f3-4e9d-ab15-79e0712b6f53"
+        ],
+        "isRemovable": false,
+        "filePath": "Test523"
+      },
+      "3c2c1259-f6f3-4e9d-ab15-79e0712b6f53": {
+        "id": "3c2c1259-f6f3-4e9d-ab15-79e0712b6f53",
+        "parent": "0c6ca6db-4cfa-4989-a717-d1690b315fb1",
+        "name": "lambda.js",
+        "type": "LAMBDA_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "Test523/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    console.log(event);\n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "triggers": [
+          {
+            "resourceName": "apigusEast1API523testpost",
+            "config": {}
+          }
+        ],
+        "config": {
+          "runtime": "nodejs8.10",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        }
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "0c6ca6db-4cfa-4989-a717-d1690b315fb1",
+    "openFiles": [
+      "3c2c1259-f6f3-4e9d-ab15-79e0712b6f53"
+    ],
+    "currentFileId": "3c2c1259-f6f3-4e9d-ab15-79e0712b6f53",
+    "resources": {
+      "apigusEast1API523testpost": {
+        "name": "apigusEast1API523testpost",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 0,
+          "apiName": "API523",
+          "endpointType": "EDGE",
+          "resourceMode": 0,
+          "resourceName": "test",
+          "resourcePath": "/test",
+          "restMethod": "POST",
+          "proxyIntegration": false,
+          "enableCORS": true,
+          "stageMode": 0,
+          "stageName": "test"
+        },
+        "globallyEditable": false
+      }
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    },
+    "lambdaId": "3c2c1259-f6f3-4e9d-ab15-79e0712b6f53"
+  },
+  "PROJECT_META": {
+    "projectName": "Test523",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1546861369302
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "Test523",
+      "url": "https://github.com/sigmaidetest/Test523"
+    }
+  }
+}
